@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "angel-photo",
+      "description": "A placeholder photo for Angel's birthday.",
+      "imageUrl": "https://images.unsplash.com/photo-1616790876844-97c0c6057364?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwb3J0cmFpdCUyMGdpcmx8ZW58MHx8fHwxNzcwNzE2OTAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait girl"
+    }
+  ]
 }
