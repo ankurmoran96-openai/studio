@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { CssCake } from '@/components/ui/CssCake';
 import { FloatingParticles } from '@/components/ui/FloatingParticles';
 import { Card, CardContent } from '@/components/ui/card';
@@ -39,6 +40,22 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
             <CssCake />
           </div>
           
+          <div className="relative mt-12 animate-in fade-in duration-1000 delay-700 fill-mode-both">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-lg shadow-primary/20">
+                <Image
+                    src="/angel.jpg"
+                    alt="Photo of Angel"
+                    width={256}
+                    height={256}
+                    className="object-cover w-full h-full"
+                />
+            </div>
+            <Flower2 className="absolute -top-4 -left-4 w-12 h-12 text-primary opacity-80 rotate-[-45deg] animate-pulse-slow" />
+            <Star className="absolute -top-2 -right-4 w-8 h-8 text-accent opacity-90 animate-pulse delay-200" />
+            <Flower2 className="absolute -bottom-4 -right-4 w-12 h-12 text-primary opacity-80 rotate-[45deg] animate-pulse-slow delay-300" />
+            <Star className="absolute -bottom-2 -left-4 w-8 h-8 text-accent opacity-90 animate-pulse delay-500" />
+          </div>
+
           <div className="flex flex-col items-center gap-2 text-muted-foreground animate-pulse mt-8">
               <p>Scroll down for your message</p>
               <ChevronDown />
