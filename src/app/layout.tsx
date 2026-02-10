@@ -1,6 +1,22 @@
 import type { Metadata } from 'next';
+import { Pacifico, Caveat } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+
+const pacifico = Pacifico({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-pacifico',
+  display: 'swap',
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-caveat',
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
   title: "Angel's Digital Birthday",
@@ -13,19 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Pacifico&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${pacifico.variable} ${caveat.variable}`}>
+      <head />
       <body className="font-body antialiased">
         {children}
         <Toaster />

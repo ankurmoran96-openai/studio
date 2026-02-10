@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Caveat', 'cursive'],
-        headline: ['Pacifico', 'cursive'],
+        body: ['var(--font-caveat)', 'cursive'],
+        headline: ['var(--font-pacifico)', 'cursive'],
         code: ['monospace'],
       },
       colors: {
