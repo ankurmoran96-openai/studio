@@ -22,14 +22,16 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
       <CuteAnimals />
       <div className="relative z-10 flex flex-col items-center gap-12 animate-in fade-in duration-1000 delay-500 fill-mode-both p-4 pt-16 md:pt-24 min-h-screen overflow-y-auto">
         
-        <div className="relative">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-center bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent">
+        <div className="relative text-center">
+            <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent">
             Happy Birthday Angel!
             </h1>
-            <Sparkles className="absolute -top-4 -left-8 w-8 h-8 text-accent opacity-80 animate-pulse" />
-            <Sparkles className="absolute -bottom-4 -right-8 w-8 h-8 text-primary opacity-80 animate-pulse delay-200" />
-            <Sparkles className="absolute top-0 -right-16 w-6 h-6 text-primary opacity-70 animate-pulse delay-500" />
-            <Sparkles className="absolute bottom-0 -left-16 w-6 h-6 text-accent opacity-70 animate-pulse delay-700" />
+            <Sparkles className="absolute -top-8 -left-12 w-10 h-10 text-accent opacity-70 animate-pulse" />
+            <Sparkles className="absolute top-0 -left-24 w-6 h-6 text-primary opacity-60 animate-pulse delay-300" />
+            <Sparkles className="absolute -bottom-8 -right-12 w-10 h-10 text-primary opacity-70 animate-pulse delay-200" />
+            <Sparkles className="absolute bottom-0 -right-24 w-6 h-6 text-accent opacity-60 animate-pulse delay-500" />
+            <Star className="absolute top-1/2 -translate-y-1/2 -left-16 w-8 h-8 text-primary/50 animate-pulse-slow" />
+            <Star className="absolute top-1/2 -translate-y-1/2 -right-16 w-8 h-8 text-accent/50 animate-pulse-slow delay-400" />
         </div>
         
         <div className="w-full max-w-xs mt-8">
@@ -41,11 +43,13 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
             <ChevronDown />
         </div>
 
-        <Card className="relative max-w-xl w-full bg-card/80 border-primary/20 text-center mt-32 mb-16 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-1000 fill-mode-both shadow-lg shadow-primary/10">
-          <Flower2 className="absolute -top-6 -left-6 w-12 h-12 text-primary opacity-50 rotate-[-30deg]" />
-          <Star className="absolute -top-4 -right-4 w-8 h-8 text-accent opacity-60" />
-          <Flower2 className="absolute -bottom-6 -right-5 w-12 h-12 text-primary opacity-50 rotate-[30deg]" />
-           <Star className="absolute -bottom-4 -left-4 w-8 h-8 text-accent opacity-60" />
+        <Card className="relative max-w-xl w-full bg-card/80 border-primary/20 text-center mt-48 mb-32 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-1000 fill-mode-both shadow-lg shadow-primary/10">
+          <Flower2 className="absolute -top-8 -left-8 w-14 h-14 text-primary opacity-60 rotate-[-45deg] animate-pulse-slow" />
+          <Star className="absolute -top-6 -right-6 w-10 h-10 text-accent opacity-70 animate-pulse delay-200" />
+          <Flower2 className="absolute -bottom-8 -right-8 w-14 h-14 text-primary opacity-60 rotate-[45deg] animate-pulse-slow delay-300" />
+          <Star className="absolute -bottom-6 -left-6 w-10 h-10 text-accent opacity-70 animate-pulse delay-500" />
+          <Flower2 className="absolute top-1/2 -left-12 w-8 h-8 text-accent/50 rotate-[-15deg]" />
+          <Flower2 className="absolute top-1/2 -right-12 w-8 h-8 text-primary/50 rotate-[15deg]" />
 
           <CardContent className="p-6 md:p-8">
             <p className="font-body text-lg leading-relaxed text-foreground/80">
