@@ -13,13 +13,13 @@ export function IntroScreen({ isActive, onNextClick }: IntroScreenProps) {
         isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
       }`}
     >
-      <div className="relative animate-in fade-in slide-in-from-bottom-10 duration-700">
+      <div className="relative animate-in fade-in slide-in-from-bottom-10 duration-700 max-w-md">
         <Sparkles className="absolute -top-2 -left-4 w-6 h-6 text-accent opacity-80 animate-pulse" />
-        <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
+        <h1 className="font-headline text-5xl md:text-6xl font-bold tracking-tight">
           So, dear Angel.
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-muted-foreground">
-          I made this website especially for you for your surprise...
+        <p className="mt-4 text-2xl md:text-3xl text-muted-foreground">
+          I made this website especially for your surprise...
         </p>
         <Sparkles className="absolute -bottom-2 -right-4 w-6 h-6 text-primary opacity-80 animate-pulse delay-200" />
       </div>

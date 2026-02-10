@@ -57,18 +57,18 @@ const Candle = ({ delay, left }: { delay: string, left: string }) => (
 
 export function CssCake() {
   return (
-    <div className="relative w-64 h-48 flex justify-center items-end">
+    <div className="relative w-[250px] h-[192px] mx-auto flex justify-center items-end">
         {/* Plate */}
-        <div className="absolute bottom-0 w-80 h-4 bg-slate-200/80 rounded-lg shadow-inner"></div>
+        <div className="absolute bottom-0 w-full scale-x-110 h-4 bg-slate-200/80 rounded-lg shadow-inner"></div>
 
         {/* Bottom Layer */}
-        <div className="relative w-[250px] h-[70px] bg-primary/80 rounded-lg z-10">
+        <div className="relative w-[90%] h-[70px] bg-primary/80 rounded-lg z-10">
             <div className="absolute -top-2 w-full h-4 bg-white/90 rounded-t-lg"></div>
             <Sprinkles count={30} />
         </div>
 
         {/* Top Layer */}
-        <div className="absolute bottom-[70px] w-[180px] h-[60px] bg-accent/80 rounded-lg z-20">
+        <div className="absolute bottom-[70px] w-[65%] h-[60px] bg-accent/80 rounded-lg z-20">
              <div className="absolute -top-2 w-full h-4 bg-white/90 rounded-t-lg">
                 <Candle delay="0.2s" left="30%" />
                 <Candle delay="0.5s" left="45%" />

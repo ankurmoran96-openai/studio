@@ -15,10 +15,10 @@ export function PrankScreen({ isActive, onNextClick }: PrankScreenProps) {
     >
       <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
         <SmilePlus className="w-16 h-16 mx-auto text-accent animate-bounce" />
-        <h1 className="mt-4 font-headline text-3xl md:text-5xl font-bold tracking-tight">
-          Hehe js kidding
+        <h1 className="mt-4 font-headline text-4xl md:text-5xl font-bold tracking-tight">
+          Hehe jk
         </h1>
-        <p className="mt-2 text-2xl md:text-4xl text-muted-foreground">
+        <p className="mt-2 text-2xl md:text-3xl text-muted-foreground max-w-xs">
           you are already my cutiee gf
         </p>
       </div>
