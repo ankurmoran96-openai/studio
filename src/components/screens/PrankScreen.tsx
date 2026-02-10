@@ -18,7 +18,7 @@ export function PrankScreen({ isActive, onNextClick }: PrankScreenProps) {
         <h1 className="mt-4 font-headline text-3xl md:text-5xl font-bold tracking-tight">
           Hehe js kidding
         </h1>
-        <p className="mt-2 text-2xl md:text-4xl text-slate-300">
+        <p className="mt-2 text-2xl md:text-4xl text-muted-foreground">
           you are already my cutiee gf
         </p>
       </div>

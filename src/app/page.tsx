@@ -10,7 +10,7 @@ export default function Home() {
   const [activeScreen, setActiveScreen] = useState('question');
 
   return (
-    <main className="relative w-screen h-screen bg-black overflow-hidden">
+    <main className="relative w-screen min-h-screen bg-background">
       <QuestionScreen
         isActive={activeScreen === 'question'}
         onYesClick={() => setActiveScreen('prank')}

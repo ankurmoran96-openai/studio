@@ -34,9 +34,11 @@ const Cat = ({ className }: { className?: string }) => (
 export function CuteAnimals() {
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
-      <Bunny className="absolute w-24 h-24 text-white/10 bottom-[20%] left-[5%] animate-in fade-in duration-1000 delay-[2500ms] fill-mode-both" />
-      <Cat className="absolute w-28 h-28 text-primary/10 top-[15%] right-[8%] -scale-x-100 animate-in fade-in duration-1000 delay-[2800ms] fill-mode-both" />
-      <Bunny className="absolute w-20 h-20 text-accent/5 bottom-[50%] right-[15%] rotate-12 animate-in fade-in duration-1000 delay-[3000ms] fill-mode-both" />
+      <Bunny className="absolute w-24 h-24 text-primary/20 bottom-[20%] left-[5%] animate-in fade-in duration-1000 delay-[2500ms] fill-mode-both" />
+      <Cat className="absolute w-28 h-28 text-accent/20 top-[15%] right-[8%] -scale-x-100 animate-in fade-in duration-1000 delay-[2800ms] fill-mode-both" />
+      <Bunny className="absolute w-20 h-20 text-accent/10 bottom-[50%] right-[15%] rotate-12 animate-in fade-in duration-1000 delay-[3000ms] fill-mode-both" />
+      <Cat className="absolute w-24 h-24 text-primary/15 top-[60%] left-[10%] rotate-[-15deg] animate-in fade-in duration-1000 delay-[3200ms] fill-mode-both" />
+      <Bunny className="absolute w-16 h-16 text-secondary/20 top-[30%] left-[20%] animate-in fade-in duration-1000 delay-[3500ms] fill-mode-both" />
     </div>
   );
 }
