@@ -47,7 +47,7 @@ export function QuestionScreen({ isActive, onYesClick }: QuestionScreenProps) {
         <Button
           onClick={onYesClick}
           size="lg"
-          className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg shadow-[0_0_20px_theme(colors.primary)] hover:shadow-[0_0_30px_theme(colors.primary)] transition-all duration-300"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg shadow-[0_0_20px_theme(colors.primary)] hover:shadow-[0_0_30px_theme(colors.primary)] transition-all duration-300 transform hover:scale-105"
         >
           Omg!!!! yess!!! (⁠ ⁠ꈍ⁠ᴗ⁠ꈍ⁠)
         </Button>

@@ -23,7 +23,7 @@ export function IntroScreen({ isActive, onNextClick }: IntroScreenProps) {
       <Button
         onClick={onNextClick}
         size="lg"
-        className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-200 fill-mode-both bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg shadow-[0_0_20px_theme(colors.primary)] hover:shadow-[0_0_30px_theme(colors.primary)] transition-all duration-300"
+        className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-200 fill-mode-both bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg shadow-[0_0_20px_theme(colors.primary)] hover:shadow-[0_0_30px_theme(colors.primary)] transition-all duration-300 transform hover:scale-105"
       >
         Go To Surprise
       </Button>
