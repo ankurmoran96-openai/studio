@@ -7,6 +7,7 @@ import { FloatingParticles } from '@/components/ui/FloatingParticles';
 import { Flower2, Star, ChevronDown, Sparkles, Gift } from 'lucide-react';
 import { CuteAnimals } from '@/components/ui/CuteAnimals';
 import { Card, CardContent } from '@/components/ui/card';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type BirthdayScreenProps = {
   isActive: boolean;
@@ -14,6 +15,7 @@ type BirthdayScreenProps = {
 
 export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
   const [isMessageOpen, setIsMessageOpen] = useState(false);
+  const angelPhoto = PlaceHolderImages.find(img => img.id === 'angel-photo');
 
   return (
     <div
@@ -44,13 +46,16 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
           
           <div className="relative mt-12 animate-in fade-in duration-1000 delay-700 fill-mode-both">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-lg shadow-primary/20">
-                <Image
-                    src="/angel.jpg"
-                    alt="Photo of Angel"
-                    width={256}
-                    height={256}
-                    className="object-cover w-full h-full"
-                />
+                {angelPhoto && (
+                  <Image
+                      src={angelPhoto.imageUrl}
+                      alt={angelPhoto.description}
+                      width={256}
+                      height={256}
+                      className="object-cover w-full h-full"
+                      data-ai-hint={angelPhoto.imageHint}
+                  />
+                )}
             </div>
             <Flower2 className="absolute -top-4 -left-4 w-12 h-12 text-primary opacity-80 rotate-[-45deg] animate-pulse-slow" />
             <Star className="absolute -top-2 -right-4 w-8 h-8 text-accent opacity-90 animate-pulse delay-200" />
