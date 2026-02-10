@@ -24,7 +24,7 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         <FloatingParticles />
         <CuteAnimals />
-        <div className="relative z-10 flex flex-col items-center gap-12 animate-in fade-in duration-1000 delay-500 fill-mode-both p-4 pt-16 md:pt-24 min-h-screen">
+        <div className="relative z-10 flex flex-col items-center gap-12 animate-in fade-in duration-1000 delay-500 fill-mode-both p-4 pt-16 md:pt-24 min-h-[150vh]">
           
           <div className="relative text-center">
               <h1 className="font-headline text-6xl md:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-primary to-accent">
