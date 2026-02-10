@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { SmilePlus } from 'lucide-react';
 
 type PrankScreenProps = {
   isActive: boolean;
@@ -13,7 +14,8 @@ export function PrankScreen({ isActive, onNextClick }: PrankScreenProps) {
       }`}
     >
       <div className="animate-in fade-in slide-in-from-bottom-10 duration-700">
-        <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">
+        <SmilePlus className="w-16 h-16 mx-auto text-accent animate-bounce" />
+        <h1 className="mt-4 font-headline text-3xl md:text-5xl font-bold tracking-tight">
           Hehe js kidding
         </h1>
         <p className="mt-2 text-2xl md:text-4xl text-slate-300">
