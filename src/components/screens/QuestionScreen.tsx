@@ -4,14 +4,13 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Heart } from 'lucide-react';
 import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-  } from "@/components/ui/alert-dialog"
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+  } from "@/components/ui/dialog"
 
 type QuestionScreenProps = {
   isActive: boolean;
@@ -86,19 +85,19 @@ export function QuestionScreen({ isActive, onYesClick }: QuestionScreenProps) {
         </Button>
       </div>
 
-      <AlertDialog open={showNoPopup} onOpenChange={setShowNoPopup}>
-        <AlertDialogContent className="font-body">
-          <AlertDialogHeader>
-            <AlertDialogTitle className="font-headline text-2xl">Really? 🙂</AlertDialogTitle>
-            <AlertDialogDescription>
+      <Dialog open={showNoPopup} onOpenChange={setShowNoPopup}>
+        <DialogContent className="font-body">
+          <DialogHeader>
+            <DialogTitle className="font-headline text-2xl">Really? 🙂</DialogTitle>
+            <DialogDescription>
               Are you sure? My heart can't take it!
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction onClick={() => setShowNoPopup(false)}>Okay, fine...</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setShowNoPopup(false)}>Okay, fine...</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
     </div>
   );
