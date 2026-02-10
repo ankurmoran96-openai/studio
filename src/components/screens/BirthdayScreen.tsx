@@ -15,7 +15,7 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
 
   return (
     <div
-      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out overflow-hidden ${
+      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
         isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
       }`}
     >
