@@ -1,11 +1,19 @@
 "use client";
 
-import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
+
+type Particle = {
+  id: number;
+  style: React.CSSProperties;
+  colorClass: string;
+};
 
 export function FloatingParticles() {
-  const particles = useMemo(() => {
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
     const particleCount = 50;
-    return Array.from({ length: particleCount }).map((_, i) => {
+    const generatedParticles = Array.from({ length: particleCount }).map((_, i) => {
       const size = Math.random() * 3 + 1; // 1px to 4px
       const left = Math.random() * 100; // 0% to 100%
       const animationDuration = Math.random() * 10 + 10; // 10s to 20s
@@ -25,7 +33,9 @@ export function FloatingParticles() {
         colorClass: i % 3 === 0 ? 'bg-primary' : i % 3 === 1 ? 'bg-accent' : 'bg-white',
       };
     });
+    setParticles(generatedParticles);
   }, []);
+
 
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
