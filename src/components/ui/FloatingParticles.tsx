@@ -10,8 +10,15 @@ type Particle = {
 
 export function FloatingParticles() {
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const particleCount = 50;
     const generatedParticles = Array.from({ length: particleCount }).map((_, i) => {
       const size = Math.random() * 3 + 1; // 1px to 4px
@@ -34,12 +41,12 @@ export function FloatingParticles() {
       };
     });
     setParticles(generatedParticles);
-  }, []);
+  }, [isClient]);
 
 
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
-      {particles.map((p) => (
+      {isClient && particles.map((p) => (
         <div
           key={p.id}
           className={`absolute bottom-0 rounded-full animate-particle-float ${p.colorClass}`}

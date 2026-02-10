@@ -34,27 +34,27 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
         </h1>
         
         {photo && (
-          <div className="relative group">
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-75 group-hover:opacity-100 transition duration-300"></div>
+          <div className="relative group mt-8">
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-60 group-hover:opacity-80 transition duration-500 animate-pulse-slow"></div>
             <Image
               src={photo.imageUrl}
               alt={photo.description}
-              width={240}
-              height={240}
-              className="relative w-48 h-48 md:w-60 md:h-60 rounded-full ring-4 ring-black object-cover"
+              width={288}
+              height={288}
+              className="relative w-56 h-56 md:w-72 md:h-72 rounded-full ring-4 ring-background object-cover"
               data-ai-hint={photo.imageHint}
             />
              {/* Decorations */}
-            <Decoration className="top-0 left-0 -translate-x-1/2 -translate-y-1/2 rotate-[-30deg]"><Flower2 size={40} /></Decoration>
-            <Decoration className="top-0 right-0 translate-x-1/2 -translate-y-1/2 rotate-[30deg]"><Star size={30} /></Decoration>
-            <Decoration className="bottom-0 left-0 -translate-x-1/2 translate-y-1/2 rotate-[30deg]"><Star size={30} /></Decoration>
-            <Decoration className="bottom-0 right-0 translate-x-1/2 translate-y-1/2 rotate-[-30deg]"><Flower2 size={40} /></Decoration>
-            <Decoration className="top-1/2 -left-12 -translate-x-1/2 -translate-y-1/2"><Star size={20} /></Decoration>
-            <Decoration className="top-1/2 -right-12 translate-x-1/2 -translate-y-1/2"><Star size={20} /></Decoration>
+            <Decoration className="top-0 left-0 -translate-x-1/3 -translate-y-1/3 rotate-[-45deg] scale-75 md:scale-100"><Flower2 size={50} /></Decoration>
+            <Decoration className="top-0 right-0 translate-x-1/3 -translate-y-1/3 rotate-[45deg] scale-75 md:scale-100"><Star size={40} /></Decoration>
+            <Decoration className="bottom-0 left-1/4 -translate-x-1/2 translate-y-1/3 rotate-[45deg] scale-75 md:scale-100"><Star size={40} /></Decoration>
+            <Decoration className="bottom-0 right-1/4 translate-x-1/2 translate-y-1/3 rotate-[-45deg] scale-75 md:scale-100"><Flower2 size={50} /></Decoration>
+            <Decoration className="top-1/2 -left-12 md:-left-16 -translate-x-1/2 -translate-y-1/2 rotate-[-15deg] scale-75 md:scale-100"><Star size={30} /></Decoration>
+            <Decoration className="top-1/2 -right-12 md:-right-16 translate-x-1/2 -translate-y-1/2 rotate-[15deg] scale-75 md:scale-100"><Star size={30} /></Decoration>
           </div>
         )}
 
-        <div className="w-full max-w-xs">
+        <div className="w-full max-w-xs mt-8">
           <CssCake />
         </div>
         
@@ -63,7 +63,7 @@ export function BirthdayScreen({ isActive }: BirthdayScreenProps) {
             <ChevronDown />
         </div>
 
-        <Card className="max-w-xl w-full bg-white/10 backdrop-blur-md border-primary/20 text-center mt-32 mb-16 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-1000 fill-mode-both">
+        <Card className="max-w-xl w-full bg-white/5 backdrop-blur-md border-primary/20 text-center mt-32 mb-16 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-1000 fill-mode-both">
           <CardContent className="p-6">
             <p className="font-body text-lg leading-relaxed text-slate-200">
               Janmadin ko dherai dherai subhakamana mero Maya. Timi dherai lucky

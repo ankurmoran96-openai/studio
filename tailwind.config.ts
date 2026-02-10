@@ -95,13 +95,17 @@ export default {
         'particle-float': {
           '0%': { transform: 'translateY(0) translateX(0)', opacity: '1' },
           '100%': { transform: 'translateY(-150vh) translateX(var(--tw-translate-x))', opacity: '0' },
+        },
+        'pulse-slow': {
+          '50%': { opacity: '.6' },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'flicker': 'flicker 1.5s infinite',
-        'particle-float': 'particle-float 15s linear infinite'
+        'particle-float': 'particle-float 15s linear infinite',
+        'pulse-slow': 'pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
